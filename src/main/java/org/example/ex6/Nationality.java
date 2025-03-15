@@ -18,7 +18,7 @@ public enum Nationality {
         this.colors = colors;
     }
 
-    public List<Color> getColors() {
+    public List<Color> getFlagColors() {
         return Arrays.asList(colors);
     }
 }
