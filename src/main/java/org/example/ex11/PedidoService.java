@@ -2,19 +2,12 @@ package org.example.ex11;
 
 public class PedidoService {
     public void atualizarStatus(StatusPedido status) {
-        switch (status) {
-            case PENDENTE:
-                System.out.println("O pedido está pendente.");
-                break;
-            case PROCESSANDO:
-                System.out.println("O pedido está sendo processado.");
-                break;
-            case ENVIADO:
-                System.out.println("O pedido foi enviado.");
-                break;
-            case ENTREGUE:
-                System.out.println("O pedido foi entregue.");
-                break;
-        }
+        String mensagem = switch (status) {
+            case PENDENTE -> "O pedido está pendente.";
+            case PROCESSANDO -> "O pedido está sendo processado.";
+            case ENVIADO -> "O pedido foi enviado.";
+            case ENTREGUE -> "O pedido foi entregue.";
+        };
+        System.out.println(mensagem);
     }
 }
